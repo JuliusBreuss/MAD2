@@ -1,8 +1,5 @@
 package com.example.movieappmad23.models
 
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.setValue
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.util.*
@@ -20,9 +17,9 @@ class Movie(
     val plot: String = "No plot available",
     val images: List<String> = listOf(),
     val rating: Double = 0.0,
-    initialIsFavorite: Boolean = false
+    var isFavorite: Boolean = false
 ) {
-    var isFavorite by mutableStateOf(initialIsFavorite)
+    //var isFavorite by mutableStateOf(initialIsFavorite)
 }
 
 fun getMovies(): List<Movie> {
